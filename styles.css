@@ -169,7 +169,7 @@ input:checked ~ .bubble::after {
 }
 
 .todo-list .list {
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 
 .todo-list .todo-item {
@@ -227,4 +227,21 @@ input:checked ~ .bubble::after {
 .todo-item.done .todo-content input {
 	text-decoration: line-through;
 	color: var(--grey);
+}
+
+.todo-list input[type="button"]{
+	background-color: var(--primary);
+	color: #FFF;
+	box-shadow: var(--personal-glow);
+	font-weight: 400 ;
+	padding: .40rem 1rem;
+	border-radius: 0.5rem;
+	float: right;
+	position: relative;
+	top: -27px;
+}
+
+.todo-list input[type="button"]:hover{
+	opacity: 75%;
+	cursor: pointer;
 }

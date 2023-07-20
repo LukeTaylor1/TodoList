@@ -4,23 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  href="styles.css">
     <title>To Do List</title>
 </head>
 <body>
-    <h1>What's up, name</h1>
-    <section class="create-todo">
-        <div> 
-            <h2> CREATE A TODO</h2>
-            <h3>What's on your todo</h3>
-            <input type="text" placeholder="Dishes, Laundry, etc.">
-        </div>
-        <div>
-            <h3>Pick a category</h3>
-            <input type="radio" title="Business" id="Business" name="Business">
-            <label for="Business" 
-        </div>
-    </section>
-    
-    
+    <main class="app">
+        <section class="greeting">
+            <h2 class="title">
+                What's up, <input type="text" id="name" placeholder="Name here">
+
+            </h2>
+        </section>
+        <section class="create-todo">
+            
+            <h3> CREATE A TODO</h3>
+                <form id="new-todo-form">
+                    <h4>What's on your todo list?</h4>
+                    <input 
+                        type="text" 
+                        name="content"
+                        id= "content"
+                        placeholder="Dishes, Laundry, etc.">
+            
+                    <h4>Pick a category</h4>
+                    <div class="options">
+                        <label>
+                            <input 
+                                type="radio" 
+                                name="category" 
+                                id="category1" 
+                                value="business">
+                            <span  class="bubble business"></span>
+                            <div>Business</div>
+                        </label>
+                        <label>
+                            <input 
+                                type="radio" 
+                                name="category" 
+                                id="category2" 
+                                value="personal"> 
+                            <span  class="bubble personal"></span>
+                            <div>Personal</div>
+                        </label>
+                    </div>
+                    <input type="submit" value="Add Todo" />
+                </form>
+        </section>
+        <section class="todo-list">
+            <h3>TODO LIST</h3>
+            <div class="list" id="todo-list"></div>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
 </body>
 </html>

@@ -36,7 +36,6 @@ window.addEventListener('load', () => {
 function DisplayTodos () {
     const todoList = document.querySelector('#todo-list');
 
-
     // every time todo is called, clear all the elements
     todoList.innerHTML = '';
 
@@ -127,12 +126,26 @@ function DisplayTodos () {
             DisplayTodos()
         })
 
+
     });
 
 
+
 }
+const sort = document.querySelector('#sort');
+let isSort = true;
+
+    sort.addEventListener('click',() =>{
+        if(isSort == true){
+            todos.sort((a, b) => a.createdAt - b.createdAt);
+            isSort = false;
+        } else {
+            todos.sort((a, b) => b.createdAt - a.createdAt);
+            isSort = true;
+        }
+        DisplayTodos();
+    })
 
 // todo
-// order by Date
 // change colors
 // dark mode 

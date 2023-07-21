@@ -229,6 +229,9 @@ input:checked ~ .bubble::after {
 	color: var(--grey);
 }
 
+
+
+/* date filter */
 .todo-list input[type="button"]{
 	background-color: var(--primary);
 	color: #FFF;
@@ -244,4 +247,19 @@ input:checked ~ .bubble::after {
 .todo-list input[type="button"]:hover{
 	opacity: 75%;
 	cursor: pointer;
+}
+
+/* dark mode */
+
+.switch {
+	position: relative;
+	width: 60px;
+	height: 34px;
+	float: right;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
 }
